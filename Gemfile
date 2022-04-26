@@ -66,5 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom gems
 
 # Flexible authentication solution for Rails based on Warden
-
 gem 'devise'
+
+
