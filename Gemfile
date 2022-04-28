@@ -68,4 +68,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Flexible authentication solution for Rails based on Warden
 gem 'devise'
 
-
+# set of helpers which guide in leveraging regular Ruby classes and object oriented design patterns to build a simple, robust and scalable authorization system.
+gem "pundit"
