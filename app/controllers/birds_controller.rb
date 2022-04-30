@@ -8,7 +8,6 @@ class BirdsController < ApplicationController
   def show
   end
 
-
   def new
     @bird = Bird.new
     authorize @bird
@@ -40,7 +39,6 @@ class BirdsController < ApplicationController
     @bird.destroy
     redirect_to birds_url, notice: "Bird was successfully destroyed."
   end
-
 
   private
 
