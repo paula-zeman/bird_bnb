@@ -10,19 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_26_192540) do
+ActiveRecord::Schema.define(version: 2022_04_30_111118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "birds", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "breed"
     t.integer "price"
     t.string "location"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
     t.index ["user_id"], name: "index_birds_on_user_id"
   end
 
