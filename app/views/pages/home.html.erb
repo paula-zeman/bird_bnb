@@ -20,9 +20,9 @@
                 <h1 class="fw-light">What is Bird Bnb?</h1>
                 <p class="lead text-muted">Bird BnB lets you book a swimming bird for your events or really any other occasion that is bird - friendly.</p>
                 <p>
-                <a href="#" class="btn btn-info my-2">Find a Bird near you</a>
-                <a href="#" class="btn btn-secondary my-2">Check your bookings</a>
-                <a href="#" class="btn btn-secondary my-2">Create a bird to rent</a>
+                <div class="btn btn-info my-2"> <%= link_to 'Show all birds', birds_path(@birds), :class => "btn" %></div>
+                <%# <a href="#" class="btn btn-secondary my-2">Check your bookings</a> %>
+                <div class="btn btn-secondary my-2"> <%= link_to 'Create a bird', new_bird_path, :class => "btn" %></div>
                 </p>
             </div>
             </div>
