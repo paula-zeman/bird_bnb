@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-user1 = User.new(email: "abc@blabla.com", password: "123456")
-user1.save!
+user6 = User.new(email: "abc@blabla.com", password: "123456")
+user6.save!
 
 Bird.destroy_all
 new_bird = Bird.new(name: "Wow", breed: "Flamingo", price: 10, location: "Berlin", user_id: 1)
