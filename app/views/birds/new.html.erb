@@ -1,11 +1,3 @@
-<%= form_for(@bird) do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :type %>
-<%= f.select :type, ["Albatross", "Chicken", "Emu", "Flamingo", "Owl", "Parrot", "Penguin", "Turkey"] %>
-<%= f.label :price %>
-<%= f.number_field :price %>
-<%= f.label :location %>
-<%= f.text_field :location %>
-<%= f.submit %>
-<% end %>
+<h1>Create a new Bird </h1>
+
+<%= render "shared/form" %>
