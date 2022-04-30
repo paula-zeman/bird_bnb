@@ -2,7 +2,7 @@ class BirdsController < ApplicationController
   before_action :set_bird, only: [:show, :edit, :destoy, :update]
 
   def index
-    @birds = policy_scope(Restaurant)
+    @birds = policy_scope(Bird)
   end
 
   def show
