@@ -20,6 +20,7 @@
             <h1 class="fw-light">Your Bird</h1>
             <p class="lead text-muted">Bird details:</p>
 
+                <p><%= image_tag @bird.image, alt: @bird.name, class: "img-fluid rounded", :size => "100%" %></p> 
                 <h3><%= @bird.name %></h3>
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
