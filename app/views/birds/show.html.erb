@@ -20,11 +20,11 @@
             <h1 class="fw-light">Your Bird</h1>
             <p class="lead text-muted">Bird details:</p>
             <ul>
-                <% @Bird.each do |bird| %>
-                <li><%= bird.name %></li>
-                <li><%= bird.location %></li>
-                <li><%= bird.type %></li>
-                <li><%= bird.price %></li>
+
+                <h3><%= bird.name %></h3>
+                <p>Location: <%= bird.location %></p>
+                <p>Type:<%= bird.breed %></p>
+                <p>Price: <%= bird.price %>€</p>
                 <% end %>
             </ul>
             <a href="#" class="btn btn-info my-2">Find a Bird near you</a>
