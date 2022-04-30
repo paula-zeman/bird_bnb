@@ -1,0 +1,11 @@
+<h1>All Birds</h1>
+
+<div class="container">
+	<% @birds.each do |bird| %>
+		<li> <%= bird.name %></li>
+		<li> <%= bird.breed %></li>
+		<li> <%= bird.price %></li>
+		<li> <%= bird.location %></li>
+		<li> <%= bird.image %> </li>
+	<% end %>
+</div>
