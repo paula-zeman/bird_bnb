@@ -1,19 +1,28 @@
-// Specific CSS for your home-page
-// p {
-//   background-color: antiquewhite;
-//   color: rgb(33, 69, 77);
-//   display: block;
-//   margin-block-start: 1em;
-//   margin-block-end: 2em;
-//   margin-inline-start: 250px;
-//   margin-inline-end: 250px;
-//   padding-bottom: 5em;
-//   }
+Specific CSS for your home-page
+p {
+  background-color: antiquewhite;
+  color: rgb(33, 69, 77);
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 2em;
+  margin-inline-start: 250px;
+  margin-inline-end: 250px;
+  padding-bottom: 5em;
+  }
 
-//   h1 {
-//     display: block;
-//     margin-block-start: 5em;
-//     margin-block-end: 1em;
-//     margin-inline-start: 500px;
-//     margin-inline-end: 0px;
-//     }
+  h1 {
+    display: block;
+    margin-block-start: 5em;
+    margin-block-end: 1em;
+    margin-inline-start: 500px;
+    margin-inline-end: 0px;
+    }
+
+.bg-image {
+    background-image: url("ben-wicks-AvTmlJmNs_M-unsplash.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(50%);
+}
