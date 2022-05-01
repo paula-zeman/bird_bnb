@@ -1,17 +1,23 @@
 <h1 class="text-center">All Birds</h1>
 
 <div class="container">
+		<div width: 400px>
+			<form class="d-flex">
+				<input class="form-control mr-sm-2" type="search" placeholder="Which bird are you looking for?">
+				<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div> <br>
 		<div class = "row">
       <% @birds.each do |bird| %>
         <div class="col-3 list-inline">
           <li> <%= image_tag bird.image, alt: bird.name, height: '200px', width: '200px'  %> </li>
           <strong><li> <%= bird.name %> </li></strong>
 					<li> <strong>Breed: </strong> <%= bird.breed %></li>
-					<li> <strong>Price/day: </strong> <%= bird.price %></li>
+					<li> <strong>Price/day: </strong> € <%= bird.price %></li>
 					<li> <strong>Location: </strong> <%= bird.location %></li>
         <%= link_to "View", bird_path(bird) %><br>
         </div><br>
       <% end %>
-    </div> <br><hr><br>
+    </div><hr>
 		<%= link_to "Add bird",  new_bird_path, class: "btn btn-outline-primary text-center" %> 
 </div>
