@@ -14,10 +14,10 @@ class BirdPolicy < ApplicationPolicy
   end
 
   def update?
-    user == record.user
+    user == record.user || user.role
   end
 
   def destroy?
-    user == record.user
+    user == record.user || user.role
   end
 end

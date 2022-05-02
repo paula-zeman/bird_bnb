@@ -1,9 +1,9 @@
 <div class="container">
 			<%= simple_form_for [@bird] do |f| %>
-				<%= f.input :name, placeholder: 'Write your comment here!' %>
-				<%= f.input :breed, collection: ["Albatross", "Chicken", "Emu", "Flamingo", "Owl", "Parrot", "Penguin", "Turkey"], prompt: "Select type"  %>
+				<%= f.input :name, placeholder: 'Please type the name of your bird here!!' %>
+				<%= f.input :breed, collection: ["Albatross", "Chicken", "Emu", "Flamingo", "Owl", "Parrot", "Penguin", "Turkey"], prompt: "Select type of your bird"  %>
 				<%= f.input :price %>
-				<%= f.input :location %>
+				<%= f.input :location, placeholder: 'Please enter the address of your bird' %>
 				<%= f.input :image, as: :file %>
 				<%= f.submit class: 'btn btn-primary' %>
 			<% end %>
