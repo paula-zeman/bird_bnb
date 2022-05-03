@@ -7,15 +7,15 @@
 					<% unless bird.image.key.nil? %>
 						<%= cl_image_tag(bird.image.key, width: 250, height: 250, crop: :thumb, gravity: :face) %>
 						<% else %>
-						<%= cl_image_tag("duck_hla9fm.jpg", width: 250, height: 250, crop: :thumb, gravity: :face) %>
+						<%= cl_image_tag("duckling_frowso.jpg", width: 250, height: 250, crop: :thumb, gravity: :face) %>
 					<% end %>
           <strong><li> <%= bird.name %> </li></strong>
 					<li> <strong>Breed: </strong> <%= bird.breed %></li>
 					<li> <strong>Price/day: </strong> <%= bird.price %></li>
 					<li> <strong>Location: </strong> <%= bird.location %></li>
           <%= link_to "View", bird_path(bird) %><br>
-        </div><br>
-      <% end %>
-    </div> <br><hr><br>
+        </div><br><br>
+      <% end %><br><hr>
+    </div>
 		<%= link_to "Add bird",  new_bird_path, class: "btn btn-outline-primary text-center" %> 
 </div>
