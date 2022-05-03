@@ -29,6 +29,21 @@ filename: 'flamingo.jpg')
 third_bird = Bird.create!(name: "Olav", breed: "Penguin", price: 30, location: "Leipzig", user_id: 3)
 third_bird.image.attach(io: File.open(Rails.root.join('app/assets/images/penguin.jpg')),
 filename: 'penguin.jpg')
+fourth = Bird.create!(name: "Shawn", breed: "Emu", price: 30, location: "Leipzig", user_id: 3)
+fourth.image.attach(io: File.open(Rails.root.join('app/assets/images/emu.jpg')),
+filename: 'emu.jpg')
+fifth_bird = Bird.create!(name: "Kathy", breed: "Owl", price: 30, location: "Leipzig", user_id: 3)
+fifth_bird.image.attach(io: File.open(Rails.root.join('app/assets/images/owl.jpg')),
+filename: 'owl.jpg')
+sixth_bird = Bird.create!(name: "Cail", breed: "Parrot", price: 30, location: "Leipzig", user_id: 3)
+sixth_bird.image.attach(io: File.open(Rails.root.join('app/assets/images/parrot.jpg')),
+filename: 'parrot.jpg')
+seventh_bird = Bird.create!(name: "Max", breed: "Turkey", price: 30, location: "Leipzig", user_id: 3)
+seventh_bird.image.attach(io: File.open(Rails.root.join('app/assets/images/turkey.jpg')),
+filename: 'turkey.jpg')
+eigth_bird = Bird.create!(name: "Matt", breed: "Albatross", price: 30, location: "Leipzig", user_id: 3)
+eigth_bird.image.attach(io: File.open(Rails.root.join('app/assets/images/albatross.jpg')),
+filename: 'albatross.jpg')
 # new_bird = Bird.create!(name: "Bird 4", breed: "Emu", price: 25, location: "London", user_id: 1)
 # new_bird = Bird.create!(name: "Bird 5", breed: "Owl", price: 15, location: "Paris", user_id: 1)
 # new_bird = Bird.create!(name: "Bird 6", breed: "Parrot", price: 18, location: "Stockholm", user_id: 1)
