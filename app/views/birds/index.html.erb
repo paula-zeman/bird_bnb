@@ -4,12 +4,16 @@
 		<div class = "row">
       <% @birds.each do |bird| %>
         <div class="col-3 list-inline">
-          <li> <%= image_tag bird.image, alt: bird.name, height: '200px', width: '200px'  %> </li>
+					<% unless bird.image.key.nil? %>
+						<%= cl_image_tag(bird.image.key, width: 250, height: 250, crop: :thumb, gravity: :face) %>
+						<% else %>
+						<%= cl_image_tag("duck_hla9fm.jpg", width: 250, height: 250, crop: :thumb, gravity: :face) %>
+					<% end %>
           <strong><li> <%= bird.name %> </li></strong>
 					<li> <strong>Breed: </strong> <%= bird.breed %></li>
 					<li> <strong>Price/day: </strong> <%= bird.price %></li>
 					<li> <strong>Location: </strong> <%= bird.location %></li>
-        <%= link_to "View", bird_path(bird) %><br>
+          <%= link_to "View", bird_path(bird) %><br>
         </div><br>
       <% end %>
     </div> <br><hr><br>

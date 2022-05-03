@@ -73,3 +73,5 @@ gem "pundit"
 
 # Hosting images
 gem 'cloudinary', '~> 1.16.0'
+
+gem 'dotenv-rails', groups: [:development, :test]
