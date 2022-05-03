@@ -26,9 +26,10 @@
                 <p>Type:<%= @bird.breed %></p>
                 <p>Price: <%= @bird.price %>€</p>
 
-            <a href="#" class="btn btn-info my-2">Find a Bird near you</a>
-            <a href="#" class="btn btn-secondary my-2">Check your bookings</a>
-            <div class="btn btn-secondary my-2"> <%= link_to 'Create another bird', new_bird_path(@bird), :class => "btn" %></div>
+            <div class="btn btn-info my-2"> <%= link_to 'Update bird', edit_bird_path(@bird), :class => "btn" %></div>
+            <div class="btn btn-info my-2"> <%= link_to 'Create another bird', new_bird_path(@bird), :class => "btn" %></div>
+             <div class="btn btn-secondary my-2"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+
         </div>
         </div>
     </section>
