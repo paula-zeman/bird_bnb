@@ -1,26 +1,26 @@
 Specific CSS for your home-page
-p {
-  background-color: antiquewhite;
-  color: rgb(33, 69, 77);
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 2em;
-  margin-inline-start: 250px;
-  margin-inline-end: 250px;
-  padding-bottom: 5em;
-  }
-
-  h1 {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 30px;
-    margin-inline-end: 0px;
-    }
-
 body {
     background-image: url("ben-wicks-AvTmlJmNs_M-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: saturate(50%);
+}
+
+p {
+    background-color: antiquewhite;
+    color: rgb(33, 69, 77);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 2em;
+    margin-inline-start: 250px;
+    margin-inline-end: 250px;
+    padding-bottom: 5em;
+}
+
+h1 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 30px;
+    margin-inline-end: 0px;
 }
