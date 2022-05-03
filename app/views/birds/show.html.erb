@@ -20,7 +20,7 @@
             <h1 class="fw-light">Your Bird</h1>
             <p class="lead text-muted">Bird details:</p>
 
-                <p><%= image_tag @bird.image, alt: @bird.name, class: "img-fluid rounded", :size => "50%" %></p> 
+                <p><%= image_tag @bird.image, alt: @bird.name, class: "img-fluid rounded", :size => "50%" %></p>
                 <h3><%= @bird.name %></h3>
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
@@ -28,7 +28,7 @@
 
             <a href="#" class="btn btn-info my-2">Find a Bird near you</a>
             <a href="#" class="btn btn-secondary my-2">Check your bookings</a>
-            <a href="#" class="btn btn-secondary my-2">Create a bird to rent</a>
+            <div class="btn btn-secondary my-2"> <%= link_to 'Create another bird', new_bird_path(@bird), :class => "btn" %></div>
         </div>
         </div>
     </section>
