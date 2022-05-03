@@ -70,3 +70,6 @@ gem 'devise'
 
 # set of helpers which guide in leveraging regular Ruby classes and object oriented design patterns to build a simple, robust and scalable authorization system.
 gem "pundit"
+
+# Hosting images
+gem 'cloudinary', '~> 1.16.0'
