@@ -1,6 +1,5 @@
-<div class="container">
-			<% simple_form_for [@booking] do |f| %>
-				<% f.input :booked_bird_id %>
-				<% f.submit class: 'btn btn-primary' %>
-			<% end %>
-</div>
+<p>Do you really want to book?</p>
+<%= simple_form_for [ @bird, @booking ] do |f| %>
+<%= f.hidden_field :booking, :value => @booking %>
+<%= f.submit "Book", class: "btn btn-primary" %>
+<% end %>

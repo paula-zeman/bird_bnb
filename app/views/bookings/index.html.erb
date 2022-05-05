@@ -1,4 +1,9 @@
 <h3>Your current bookings:</h3>
 <% @user_bookings.each do |booking| %>
-<p><%= booking.user.email %></p>
+<p><%= booking.bird.name %></p>
+<p><%= image_tag booking.bird.image, alt: booking.bird.name, class: "img-fluid rounded", :size => "50%" %></p>
+                <h3><%= booking.bird.name %></h3>
+                <p>Location: <%= booking.bird.location %></p>
+                <p>Type:<%= booking.bird.breed %></p>
+                <p>Price: <%= booking.bird.price %>€</p>
 <% end %>
