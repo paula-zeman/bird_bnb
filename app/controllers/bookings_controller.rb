@@ -14,16 +14,15 @@ class BookingsController < ApplicationController
   def show
   end
 
-  # def new
-  #   @user = current_user
-  #   @booking = Booking.new
-  # end
+  def new
+    @user = current_user
+    @booking = Booking.new
+  end
 
   def create
     @user = current_user
     @bird = params.require(:booking).permit(:booked_bird)
     @booking = Booking.new(user: @user, booked_bird: @bird)
-    @booking.bird = @bird
     @booking.save!
     redirect_to bird_path(@bird) if @booking.save!
   end
