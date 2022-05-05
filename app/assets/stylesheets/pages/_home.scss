@@ -1,3 +1,9 @@
+body {
+    background-image: url("hedwig.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 p:first-of-type {
     // background-color: antiquewhite;
     color: rgb(33, 69, 77);
@@ -16,9 +22,3 @@ h1 {
     margin-inline-end: 0px;
 }
 
-.bg-image {
-    background-image: url("ben-wicks-AvTmlJmNs_M-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: saturate(50%);
-}
