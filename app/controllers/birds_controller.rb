@@ -3,6 +3,16 @@ class BirdsController < ApplicationController
 
   def index
     @birds = policy_scope(Bird)
+
+      # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @birds.geocoded.map do |bird|
+      {
+        lat: bird.latitude,
+        lng: bird.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { bird: bird }),
+				image_url: helpers.asset_url("duckling.jpg")
+      }
+    end
   end
 
   def show
