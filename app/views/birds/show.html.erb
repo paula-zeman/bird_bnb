@@ -25,7 +25,6 @@
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
                 <p>Price: <%= @bird.price %>€</p>
-
                 <div class="btn btn-secondary my-2"> <%= link_to 'Book', new_bird_booking_path(@bird), :class => "btn" %></div>
                 <% if policy(@bird).edit? %>
                 <div class="btn btn-info my-2"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
