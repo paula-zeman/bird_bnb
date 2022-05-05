@@ -29,8 +29,8 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.save!
     if @booking.save!
+      @bird.update(status: true)
       redirect_to bird_path(@bird)
-      @booked = true
     end
   end
 
@@ -46,5 +46,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
   end
+
 
 end
