@@ -21,7 +21,7 @@ h1 {
 }
 
 .bg-image {
-    background-image: url("ben-wicks-AvTmlJmNs_M-unsplash.jpg");
+    background-image: url("hedwig.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: saturate(50%);
@@ -35,4 +35,36 @@ h1 {
 .container {
   font-family : ‘Noto Sans’, sans-serif;
   font-weight: 400;
+}
+
+.btn-green {
+    background-color: #6AD58B;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+  
+.btn-green:hover {
+    background-color: #6ad5a8;
+}
+
+.btn-yellow {
+    background-color: #d5ca6a;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+  
+.btn-yellow:hover {
+    background-color: #ced56a;
 }
