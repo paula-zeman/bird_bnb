@@ -7,6 +7,8 @@ p:first-of-type {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     // padding-bottom: 5em;
+    font-family : ‘Noto Sans’, sans-serif;
+    font-weight: 400;
 }
 h1 {
     display: block;
@@ -14,6 +16,8 @@ h1 {
     margin-block-end: 1em;
     margin-inline-start: 30px;
     margin-inline-end: 0px;
+    font-family : ‘Noto Sans’, sans-serif;
+    font-weight: 400;
 }
 
 .bg-image {
@@ -21,4 +25,14 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     filter: saturate(50%);
+}
+
+.body {
+  font-family : ‘Noto Sans’, sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  font-family : ‘Noto Sans’, sans-serif;
+  font-weight: 400;
 }
