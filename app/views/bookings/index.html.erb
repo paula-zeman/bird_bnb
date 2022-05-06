@@ -6,4 +6,7 @@
                 <p>Location: <%= booking.bird.location %></p>
                 <p>Type:<%= booking.bird.breed %></p>
                 <p>Price: <%= booking.bird.price %>€</p>
+               <div class="btn btn-info my-2"> <%= link_to 'Cancel', booking_path(booking), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
 <% end %>
+
+<div class="btn btn-secondary my-2"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>

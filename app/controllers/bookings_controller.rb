@@ -36,8 +36,11 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @bookmark.destroy
-    redirect_to bird_path(@booking.bird)
+    authorize @booking
+    @bird = @booking.bird
+    @bird.update(status: false)
+    @booking.destroy
+    redirect_to bookings_url, notice: "Booking was successfully cancelled."
   end
 
   private

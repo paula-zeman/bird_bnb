@@ -25,10 +25,12 @@
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
                 <p>Price: <%= @bird.price %>€</p>
-                <% if !@bird.status? %>
-                  <div class="btn btn-secondary my-2"> <%= link_to 'Book', new_bird_booking_path(@bird), :class => "btn" %></div>
-                <% else %>
-                  <div> <%=@bird.name%> is currently booked!</div>
+                <% if @bird.user != current_user  %>
+                  <% if !@bird.status? %>
+                    <div class="btn btn-secondary my-2"> <%= link_to 'Book', new_bird_booking_path(@bird), :class => "btn" %></div>
+                  <% else %>
+                    <div> <%=@bird.name%> is currently booked!</div>
+                  <% end %>
                 <% end %>
                 <% if policy(@bird).edit? %>
                 <div class="btn btn-info my-2"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
