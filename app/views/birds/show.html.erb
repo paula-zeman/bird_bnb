@@ -20,23 +20,32 @@
             <h1 class="fw-light">Your Bird</h1>
             <p class="lead text-muted">Bird details:</p>
 
-                <p><%= image_tag @bird.image, alt: @bird.name, class: "img-fluid rounded", :size => "50%" %></p>
+					<% unless @bird.image.key.nil? %>
+						<%= cl_image_tag(@bird.image.key, height: 300, width: 400, crop: :fit) %>
+						<% else %>
+						<%= cl_image_tag("duckling_frowso.jpg", height: 300, width: 400, crop: :fit) %>
+					<% end %>
+
                 <h3><%= @bird.name %></h3>
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
                 <p>Price: <%= @bird.price %>€</p>
-                <% if @bird.user != current_user  %>
-                  <% if !@bird.status? %>
-                    <div class="btn btn-secondary my-2"> <%= link_to 'Book', new_bird_booking_path(@bird), :class => "btn" %></div>
-                  <% else %>
-                    <div> <%=@bird.name%> is currently booked!</div>
-                  <% end %>
-                <% end %>
-                <% if policy(@bird).edit? %>
-                <div class="btn btn-info my-2"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
-                <div class="btn btn-info my-2"> <%= link_to 'Delete', bird_path(@bird), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
-                <% end %>
-                <div class="btn btn-secondary my-2"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+
+            <% if @bird.user != current_user  %>
+               <% if !@bird.status? %>
+                 <div class="btn btn-info"> <%= link_to 'Book', new_bird_booking_path(@bird), :class => "btn" %></div>
+               <% else %>
+                 <div> <%= @bird.name %> is currently booked! </div>
+               <% end %>
+            <% end %>
+          
+            <% if policy(@bird).edit? %>
+               <div class="btn btn-info"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
+               <div class="btn btn-info"> <%= link_to 'Delete', bird_path(@bird), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
+            <% end %>
+          
+            <div class="btn btn-secondary"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+
 
         </div>
         </div>

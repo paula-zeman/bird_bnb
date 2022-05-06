@@ -21,7 +21,7 @@ class BirdsController < ApplicationController
     @bird.user = current_user
     authorize @bird
     if @bird.save
-      redirect_to bird_path(@bird)
+      redirect_to bird_path(@bird), status: :unprocessable_entity
     else
       render :new, notice: "Your bird could not be created."
     end
@@ -29,9 +29,9 @@ class BirdsController < ApplicationController
 
   def update
     if @bird.update(bird_params)
-      redirect_to @bird, notice: "Bird was successfully updated."
+      redirect_to @bird, status: :unprocessable_entity
     else
-      render :edit
+      render :edit, notice: "Bird was successfully updated."
     end
   end
 
@@ -48,6 +48,6 @@ class BirdsController < ApplicationController
   end
 
   def bird_params
-    params.require(:bird).permit(:name, :type, :price, :location, :image)
+    params.require(:bird).permit(:name, :breed, :price, :location, :image)
   end
 end

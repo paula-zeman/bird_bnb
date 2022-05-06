@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   after_action :verify_policy_scoped, only: [:index, :show, :destoy], unless: :skip_pundit?
 
   def index
