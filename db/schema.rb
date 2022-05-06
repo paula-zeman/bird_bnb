@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_05_202208) do
+
+ActiveRecord::Schema.define(version: 2022_05_05_185733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 2022_05_05_202208) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
+    t.boolean "status", default: false
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_birds_on_user_id"
@@ -61,6 +63,8 @@ ActiveRecord::Schema.define(version: 2022_05_05_202208) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "bird_id", null: false
+    t.index ["bird_id"], name: "index_bookings_on_bird_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -83,5 +87,6 @@ ActiveRecord::Schema.define(version: 2022_05_05_202208) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "birds", "users"
+  add_foreign_key "bookings", "birds"
   add_foreign_key "bookings", "users"
 end
