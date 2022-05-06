@@ -23,7 +23,7 @@
 					<% unless @bird.image.key.nil? %>
 						<%= cl_image_tag(@bird.image.key, height: 300, width: 400, crop: :fit) %>
 						<% else %>
-						<%= cl_image_tag("duckling_frowso.jpg", height: 300, width: 400, crop: :fit) %>
+						<%= cl_image_tag("placeholderduckling_apfxok", height: 300, width: 400, crop: :fit) %>
 					<% end %>
 
                 <h3><%= @bird.name %></h3>

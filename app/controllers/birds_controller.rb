@@ -10,7 +10,7 @@ class BirdsController < ApplicationController
         lat: bird.latitude,
         lng: bird.longitude,
         info_window: render_to_string(partial: "info_window", locals: { bird: bird }),
-				image_url: helpers.asset_url("duckling.jpg")
+				image_url: helpers.asset_url("duckling.png")
       }
     end
   end
