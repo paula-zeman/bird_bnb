@@ -42,12 +42,4 @@ class BookingsController < ApplicationController
     redirect_to bookings_url, notice: "Booking was successfully cancelled."
   end
 
-  private
-
-  def set_booking
-    @booking = Booking.find(params[:id])
-    authorize @booking
-  end
-
-
 end
