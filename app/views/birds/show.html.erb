@@ -40,11 +40,12 @@
             <% end %>
 
             <% if policy(@bird).edit? %>
-               <div class="btn btn-info"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
-               <div class="btn btn-info"> <%= link_to 'Delete', bird_path(@bird), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
+               <div class="btn btn-info ml-1 mt-1"> <%= link_to 'Update', edit_bird_path(@bird), :class => "btn" %></div>
+               <div class="btn btn-info ml-1 mt-1"> <%= link_to 'Delete', bird_path(@bird), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
             <% end %>
 
-            <div class="btn btn-secondary"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+            <div class="btn btn-secondary ml-1 mt-1"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+
 
 
         </div>
