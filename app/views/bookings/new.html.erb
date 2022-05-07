@@ -1,3 +1,4 @@
+
 <main>
     <div class="bg-image">
     <section class="py-5 text-center container">
@@ -6,9 +7,9 @@
                 <p>Do you really want to book <%=@bird.name%>?</p>
                 <%= simple_form_for [ @bird, @booking ] do |f| %>
                 <%= f.hidden_field :booking, :value => @booking %>
-				<%= cl_image_tag(@bird.image.key, height: 300, width: 400, crop: :fit) %>
+				        <%= cl_image_tag(@bird.image.key, height: 300, width: 400, crop: :fit) %>
                 <br><br>
-                <%= f.submit "Book", class: "btn btn-info" %>
+                <%= f.submit "Book", class: "d-grid gap-2 d-md-flex justify-content-md-end btn btn-info " %>
                 <% end %>
             </div>
         </div>
