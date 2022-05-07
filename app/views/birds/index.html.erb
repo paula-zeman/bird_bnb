@@ -2,7 +2,7 @@
 
 <div class="container bg-image">
 		<div class = "row">
-			<div class="col-7">
+
 				<div class="row">
         <% @birds.each do |bird| %>
         <div class="col list-inline">
@@ -19,14 +19,8 @@
           </div>
         <% end %>
           </div><br><br>
-        </div>
 
-				<div class="col-5 sticky-top">
-					<div style="width: 100%; height: 600px;"
-						data-controller="mapbox"
-						data-mapbox-markers-value="<%= @markers.to_json %>"
-						data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-				</div>
+
     </div><br><hr>
 		<%= link_to "Add bird",  new_bird_path, class: "btn btn-outline-primary text-center" %> 
 </div>
