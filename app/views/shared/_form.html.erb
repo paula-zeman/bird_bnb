@@ -1,10 +1,19 @@
 <div class="container">
+  <div class="row justify-content-center">
+
 			<%= simple_form_for [@bird] do |f| %>
 				<%= f.input :name, placeholder: 'Please type the name of your bird here!!' %>
 				<%= f.input :breed, collection: ["Albatross", "Chicken", "Emu", "Flamingo", "Owl", "Parrot", "Penguin", "Turkey"], prompt: "Select type of your bird"  %>
 				<%= f.input :price %>
-				<%= f.input :location, placeholder: 'Please enter the address of your bird' %>
-				<%= f.input :image, as: :file %>
-				<%= f.submit class: 'btn btn-success' %>
+<div>
+				<%= f.input :location, placeholder: 'Please enter the address of your bird', style: "width: 100%",
+											input_html: { data: { geocoder_target: "location" }, class: "d-none"  },
+											wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+</div>
+				<%= f.input :image, as: :file %> 
+				<%= f.submit class: 'btn btn-primary' %>
+
 			<% end %>
+
+  </div>
 </div>
