@@ -23,9 +23,10 @@ h1 {
 body {
     background-image: url("hedwig.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    backdrop-filter: blur(2px);
+    backdrop-filter: opacity(80%);
     font-family : ‘Noto Sans’, sans-serif;
     font-weight: 400;
 }
