@@ -1,5 +1,5 @@
 <p>Do you really want to book <%=@bird.name%>?</p>
 <%= simple_form_for [ @bird, @booking ] do |f| %>
 <%= f.hidden_field :booking, :value => @booking %>
-<%= f.submit "Book", class: "btn btn-primary" %>
+<%= f.submit "Book", class: "d-grid gap-2 d-md-flex justify-content-md-end btn btn-info " %>
 <% end %>
