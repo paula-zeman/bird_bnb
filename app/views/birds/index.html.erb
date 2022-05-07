@@ -13,13 +13,15 @@
 					<% end %>
           <strong><li> <%= bird.name %> </li></strong>
 					<li> <strong>Breed: </strong> <%= bird.breed %></li>
-					<li> <strong>Price/day: </strong> <%= bird.price %></li>
+					<li> <strong>Price/day: </strong> <%= bird.price %>0 €</li>
 					<li> <strong>Location: </strong> <%= bird.location %></li>
           <%= link_to "View", bird_path(bird) %><br>
 
         </div><br><br>
       <% end %><br><hr>
     </div>
-		<%= link_to "Add bird",  new_bird_path, class: "btn btn-success" %>
-    <%= link_to "My Bookings",  bookings_path, class: "btn btn-success" %>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end d-grid gap-2 col-4 mx-auto">
+		<%= link_to "Add A New Bird",  new_bird_path, class: "btn btn-info ml-1 mt-1 btn-sm" %>
+    <%= link_to "Check My Bookings",  bookings_path, class: "btn btn-info ml-1 mt-1 btn-sm" %>
+    </div>
 </div>

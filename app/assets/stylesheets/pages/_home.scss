@@ -21,11 +21,14 @@ h1 {
 }
 
 body {
-    background-image: url("hedwig.jpg");
+    background-image: url("hedwig.png");
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    // backdrop-filter: opacity(20%);
+    // backdrop-filter: brightness(60%);
+    // backdrop-filter: contrast(40%);
     background-size: cover;
     height: 100vh;
-    backdrop-filter: blur(2px);
     font-family : ‘Noto Sans’, sans-serif;
     font-weight: 400;
 }
@@ -41,3 +44,10 @@ body {
   font-weight: 400;
 }
 
+.ml-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+.mt-1 {
+  margin-top: ($spacer * .25) !important;
+}
