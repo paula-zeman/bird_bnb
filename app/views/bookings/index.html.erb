@@ -5,7 +5,7 @@
                 <h3><%= booking.bird.name %></h3>
                 <p>Location: <%= booking.bird.location %></p>
                 <p>Type:<%= booking.bird.breed %></p>
-                <p>Price: <%= booking.bird.price %>€</p>
+                <p>Price: <%= booking.bird.price %>0 €</p>
                <div class="btn btn-info my-2"> <%= link_to 'Cancel', booking_path(booking), :class => "btn", method: :delete, data: { confirm: "Are you sure?" } %></div>
 <% end %>
 

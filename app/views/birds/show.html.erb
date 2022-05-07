@@ -29,7 +29,7 @@
                 <h3><%= @bird.name %></h3>
                 <p>Location: <%= @bird.location %></p>
                 <p>Type:<%= @bird.breed %></p>
-                <p>Price: <%= @bird.price %>€</p>
+                <p>Price: <%= @bird.price %>0 €</p>
 
             <% if @bird.user != current_user  %>
                <% if !@bird.status? %>
@@ -45,6 +45,7 @@
             <% end %>
 
             <div class="btn btn-secondary ml-1 mt-1"> <%= link_to 'Back', birds_path(@birds), :class => "btn" %></div>
+
 
 
         </div>
