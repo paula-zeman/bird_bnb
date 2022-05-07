@@ -16,11 +16,10 @@
 					<li> <strong>Price/day: </strong> <%= bird.price %></li>
 					<li> <strong>Location: </strong> <%= bird.location %></li>
           <%= link_to "View", bird_path(bird) %><br>
-          </div>
-        <% end %>
-          </div><br><br>
 
-
-    </div><br><hr>
-		<%= link_to "Add bird",  new_bird_path, class: "btn btn-outline-primary text-center" %> 
+        </div><br><br>
+      <% end %><br><hr>
+    </div>
+		<%= link_to "Add bird",  new_bird_path, class: "btn btn-success" %>
+    <%= link_to "My Bookings",  bookings_path, class: "btn btn-success" %>
 </div>

@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_05_03_225113) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +47,7 @@ ActiveRecord::Schema.define(version: 2022_05_03_225113) do
   create_table "birds", force: :cascade do |t|
     t.string "name"
     t.string "breed"
-    t.integer "price"
+    t.decimal "price", precision: 5, scale: 2
     t.string "location"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 2022_05_03_225113) do
     t.string "image"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "status", default: false
     t.index ["user_id"], name: "index_birds_on_user_id"
   end
 
@@ -61,6 +63,8 @@ ActiveRecord::Schema.define(version: 2022_05_03_225113) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "bird_id", null: false
+    t.index ["bird_id"], name: "index_bookings_on_bird_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -83,5 +87,6 @@ ActiveRecord::Schema.define(version: 2022_05_03_225113) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "birds", "users"
+  add_foreign_key "bookings", "birds"
   add_foreign_key "bookings", "users"
 end
